@@ -62,7 +62,7 @@ docker run -p 80:8080 swagger-ui-builder
 This will start Swagger UI at `http://localhost`.
 
 ### Use
-Once you open the Swagger UI, it will load the [Swagger Petstore](http://petstore.swagger.io/v2/swagger.json) service and show its APIs.  You can enter your own server url and click explore to view the API.
+Once you open the Swagger UI, it will load the [Swagger Petstore](http://localhost:3000/docs/spec) service and show its APIs.  You can enter your own server url and click explore to view the API.
 
 ### Customize
 You may choose to customize Swagger UI for your organization. Here is an overview of what's in its various directories:
@@ -81,7 +81,7 @@ To use swagger-ui you should take a look at the [source of swagger-ui html page]
 
 ```javascript
 var swaggerUi = new SwaggerUi({
-  url: 'http://petstore.swagger.io/v2/swagger.json',
+  url: 'http://localhost:3000/docs/spec',
   dom_id: 'swagger-ui-container'
 });
 
@@ -190,7 +190,7 @@ You can verify CORS support with one of three techniques:
 - Curl your API and inspect the headers.  For instance:
 
 ```bash
-$ curl -I "http://petstore.swagger.io/v2/swagger.json"
+$ curl -I "http://localhost:3000/docs/spec"
 HTTP/1.1 200 OK
 Date: Sat, 31 Jan 2015 23:05:44 GMT
 Access-Control-Allow-Origin: *

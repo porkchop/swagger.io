@@ -5,7 +5,7 @@ $(function () {
   if (url && url.length > 1) {
     url = decodeURIComponent(url[1]);
   } else {
-    url = 'http://petstore.swagger.io/v2/swagger.json';
+    url = 'http://localhost:3000/docs/spec';
   }
 
   // Pre load translate...
